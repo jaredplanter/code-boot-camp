@@ -3,7 +3,7 @@
 #include <string.h>
 
 bool is_vowel( char arg )
-{ 
+{
   int i;
   if(arg < 91){
     arg = arg + 32;
@@ -21,13 +21,13 @@ bool is_vowel( char arg )
 
 int main( int argc, char *argv[] )
 {
-  char word[] = {};
-  char *quit = "exit";
-  
+  char word[10];
+  char quit[] = "exit";
+
   while( strncmp(word, quit, 4) )
   {
     puts( "Enter a message:" );
-    
+
     fgets( word, 10, stdin  );
     for( int i = 0; i <  strlen(word); i++ )
     {
@@ -40,6 +40,7 @@ int main( int argc, char *argv[] )
       }
     }
   }
-  
+
   return 0;
 }
+
